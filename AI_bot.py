@@ -4,6 +4,8 @@ from google import genai
 from dotenv import load_dotenv
 import os
 
+load_dotenv()
+
 # Загружаем переменные из файла .env
 GEMINI_KEY = os.getenv('GEMINI_KEY')
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
