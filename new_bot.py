@@ -36,7 +36,7 @@ bot = telebot.TeleBot(TELEGRAM_TOKEN)
 last_message_time = {}
 
 SYSTEM_PROMPT_TEXT = (
-    "Ты дружелюбный и умный Telegram-ассистент. "
+    "Ты дружелюбный и умный Telegram-бот. "
     "Отвечай понятно, кратко и по делу."
 )
 
@@ -128,11 +128,9 @@ def typing(chat_id, stop_event):
     while not stop_event.is_set():
         try:
             bot.send_chat_action(chat_id, "typing")
-            stop_event.wait(2)  # ждем 2 секунды или пока set
+            stop_event.wait(2)
         except:
             break
-
-
 
 
 
